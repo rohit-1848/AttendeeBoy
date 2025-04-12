@@ -1,0 +1,185 @@
+/* navbar.css */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px; /* Reduced padding for mobile */
+  height: 4rem; /* Slightly reduced height */
+  background-color: #0af0e4;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Left section - Logo & Brand Name */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Reduced gap for mobile */
+}
+
+.logo {
+  align-content: center;
+  height: 3.5rem; /* Reduced size for mobile */
+  width: auto;
+}
+
+.brand-name {
+  font-size: xx-large;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+
+.brand-name:hover {
+  color: white;
+}
+
+/* Center section - Search Bar */
+.navbar-center {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 40%;
+  max-width: 600px;
+  margin-top: 5px; /* Reduced margin */
+}
+
+.search-bar {
+  width: 100%;
+  padding: 8px 40px 8px 10px; /* Reduced padding */
+  border-radius: 20px;
+  border: 1px solid #e0e0e0;
+  font-size: 12px; /* Smaller font */
+  outline: none;
+  background-color: white;
+}
+
+.search-btn {
+  position: absolute;
+  right: 10px;
+  color: #888;
+  cursor: pointer;
+  display: none;
+}
+
+.search-bar::placeholder {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23888888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 25px; /* Adjusted for smaller size */
+}
+
+/* Right section - Navigation Links */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Reduced gap */
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #333;
+  text-decoration: none;
+  font-size: large;
+  font-weight: 500;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar-center {
+    display: none; /* Hide search bar on tablets */
+  }
+
+  .navbar-right {
+    gap: 5px;
+  }
+
+  .nav-link span {
+    display: none; /* Hide text, show only icons */
+  }
+
+  .brand-name {
+    font-size: 18px; /* Reduced for mobile */
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar {
+    padding: 0 10px;
+    height: 3.5rem; /* Further reduced */
+  }
+
+  .navbar-left {
+    gap: 2px;
+  }
+
+  .logo {
+    height: 3rem; /* Further reduced */
+  }
+
+  .brand-name {
+    display: none; /* Hide brand name on very small screens */
+  }
+
+  .navbar-right {
+    flex-direction: column; /* Stack links vertically */
+    position: absolute;
+    top: 100%;
+    right: 10px;
+    background-color: #0af0e4;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 5px 0;
+    border-radius: 4px;
+    display: none; /* Hidden by default, show on hover or click (add JS if needed) */
+  }
+
+  .navbar:hover .navbar-right {
+    display: flex; /* Show on hover for now */
+  }
+
+  .nav-link {
+    font-size: 14px; /* Smaller font */
+    padding: 5px 10px;
+  }
+}
+
+body {
+  padding-top: 60px; /* Adjusted for smaller navbar height */
+}
+
+/* Hamburger Menu */
+.navbar-toggle {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 576px) {
+  .navbar-toggle {
+    display: block; /* Show hamburger on mobile */
+  }
+
+  .navbar-right {
+    display: none; /* Hide by default on mobile */
+  }
+
+  .navbar-right.active {
+    display: flex; /* Show when active */
+  }
+}

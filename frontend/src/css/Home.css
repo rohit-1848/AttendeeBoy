@@ -1,0 +1,294 @@
+/* General Styles */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.home-content {
+  flex: 1;
+  padding: 15px; /* Reduced padding */
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.error-message {
+  margin-top: 26px;
+  color: #d32f2f;
+  margin-bottom: 15px;
+  text-align: center;
+  padding: 10px;
+  background-color: #ffebee;
+  border-radius: 4px;
+  border-left: 4px solid #d32f2f;
+  font-size: 14px; /* Reduced for mobile */
+}
+
+.loading {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Section Styles */
+.admin-section,
+.volunteer-section {
+  background: #9cf0eb;
+  margin-top: 30px;
+  padding: 15px; /* Reduced padding */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.admin-section h2,
+.volunteer-section h2 {
+  margin-bottom: 15px;
+  color: #0bc9bf;
+  font-size: 1.5rem; /* Reduced for mobile */
+  font-weight: 700;
+  border-bottom: 2px solid #0bc9bf;
+  padding-bottom: 8px;
+}
+
+/* Form and Input Styles */
+.upload-section,
+.view-section,
+.search-form {
+  margin-bottom: 15px;
+}
+
+.upload-form {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  background: white;
+  padding: 10px; /* Reduced padding */
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Full width on mobile */
+  max-width: 600px;
+}
+
+.upload-form input[type="file"] {
+  padding: 6px; /* Reduced padding */
+  background-color: #b1f7f3;
+  border: 1px solid #0bc9bf;
+  border-radius: 4px;
+  color: #333;
+  flex: 1;
+  font-size: 12px; /* Reduced for mobile */
+}
+
+.upload-form input[type="file"]::file-selector-button {
+  background-color: #0bc9bf;
+  color: white;
+  padding: 6px 12px; /* Reduced padding */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: 5px; /* Reduced margin */
+  font-weight: 600;
+}
+
+.upload-form input[type="file"]::file-selector-button:hover {
+  background-color: #0052a3;
+}
+
+.search-form input {
+  flex: 1;
+  padding: 8px; /* Reduced padding */
+  border: 1px solid #0bc9bf;
+  border-radius: 4px;
+  font-size: 14px; /* Reduced for mobile */
+  background-color: #b1f7f3;
+  color: #333;
+}
+
+.search-form input:focus {
+  outline: none;
+  border-color: #0052a3;
+  box-shadow: 0 0 5px rgba(0, 88, 163, 0.5);
+}
+
+/* Button Styles */
+.upload-form button,
+.view-section button,
+.search-form button,
+.student-details button,
+.attendance-list button {
+  background-color: #0bc9bf;
+  color: white;
+  padding: 8px 16px; /* Reduced padding */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 14px; /* Reduced for mobile */
+}
+
+.upload-form button:hover,
+.view-section button:hover,
+.search-form button:hover,
+.student-details button:hover,
+.attendance-list button:hover {
+  background-color: #0052a3;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.upload-form button:disabled,
+.view-section button:disabled,
+.search-form button:disabled,
+.student-details button:disabled,
+.attendance-list button:disabled {
+  background-color: #b1f7f3;
+  color: #666;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Attendance Table Styles */
+.attendance-table,
+.attendance-list table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  background-color: white;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.attendance-table th,
+.attendance-list th {
+  background-color: #0bc9bf;
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 8px; /* Reduced padding */
+  border: 1px solid #0bc9bf;
+  font-size: 12px; /* Reduced for mobile */
+}
+
+.attendance-table td,
+.attendance-list td {
+  padding: 8px; /* Reduced padding */
+  border: 1px solid #b1f7f3;
+  text-align: left;
+  font-size: 12px; /* Reduced for mobile */
+  color: #333;
+}
+
+.attendance-table tbody tr:nth-child(even),
+.attendance-list tbody tr:nth-child(even) {
+  background-color: #e0f7f5;
+}
+
+.attendance-table tbody tr:hover,
+.attendance-list tbody tr:hover {
+  background-color: #b1f7f3;
+  transition: background-color 0.3s ease;
+}
+
+/* Student Details Styles */
+.student-details {
+  background: white;
+  padding: 10px; /* Reduced padding */
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 15px;
+}
+
+.student-details p {
+  margin: 8px 0; /* Reduced margin */
+  font-size: 14px; /* Reduced for mobile */
+  color: #333;
+}
+
+.student-details button {
+  margin-top: 8px; /* Reduced margin */
+}
+
+/* Success Message Styles */
+.success-message {
+  margin-top: 12px; /* Reduced margin */
+  padding: 10px; /* Reduced padding */
+  background-color: #e6ffe6;
+  border-left: 4px solid #4caf50;
+  color: #4caf50;
+  font-weight: 600;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 14px; /* Reduced for mobile */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .upload-form,
+  .search-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .upload-form input[type="file"],
+  .search-form input,
+  .upload-form button,
+  .search-form button {
+    width: 100%;
+    margin-bottom: 8px; /* Reduced margin */
+  }
+
+  .attendance-table th,
+  .attendance-table td,
+  .attendance-list th,
+  .attendance-list td {
+    padding: 6px; /* Further reduced */
+    font-size: 10px; /* Further reduced */
+  }
+
+  .admin-section h2,
+  .volunteer-section h2 {
+    font-size: 1.3rem; /* Further reduced */
+  }
+}
+
+@media (max-width: 576px) {
+  .home-content {
+    padding: 10px; /* Further reduced */
+  }
+
+  .upload-form,
+  .search-form {
+    padding: 8px; /* Further reduced */
+  }
+
+  .attendance-table th,
+  .attendance-table td,
+  .attendance-list th,
+  .attendance-list td {
+    padding: 4px; /* Further reduced */
+    font-size: 8px; /* Further reduced */
+  }
+
+  .student-details p {
+    font-size: 12px; /* Further reduced */
+  }
+
+  .upload-form button,
+  .view-section button,
+  .search-form button,
+  .student-details button,
+  .attendance-list button {
+    padding: 6px 12px; /* Further reduced */
+    font-size: 12px; /* Further reduced */
+  }
+}

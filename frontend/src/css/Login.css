@@ -1,0 +1,359 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+/* Main container */
+.login-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Left section with orange background */
+.left-section {
+  background-color: #80ece7;
+  position: relative;
+  height: 100%;
+}
+
+.logo-text {
+  position: absolute;
+  top: 20px; /* Reduced for mobile */
+  left: 20px; /* Reduced for mobile */
+}
+
+.logo-text h1 {
+  color: white;
+  font-size: 40px; /* Reduced for mobile */
+  font-weight: bold;
+}
+
+/* Left illustration - person on scooter */
+.left-illustration {
+  position: absolute;
+  bottom: 80px; /* Reduced for mobile */
+  left: 20px; /* Reduced for mobile */
+}
+
+.left-illustration img {
+  width: 200px; /* Reduced size */
+  height: auto;
+}
+
+/* Right section */
+.right-section {
+  background-color: #ffffff;
+  position: relative;
+  height: 100%;
+}
+
+/* Right illustration - person playing */
+.right-illustration {
+  position: absolute;
+  bottom: 80px; /* Reduced for mobile */
+  right: 20px; /* Reduced for mobile */
+}
+
+.right-illustration img {
+  width: 200px; /* Reduced size */
+  height: auto;
+}
+
+/* Brain flower icon in top right */
+.brain-flower-icon {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+.brain-flower-icon img {
+  width: 150px; /* Reduced size */
+  height: auto;
+}
+
+/* Login form wrapper */
+.login-form-wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%; /* Full width on mobile */
+  max-width: 400px; /* Maintain max width */
+  z-index: 10;
+}
+
+/* Login form styling */
+.login-form {
+  background-color: #fff;
+  padding: 20px; /* Reduced padding */
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Form header */
+.form-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.welcome-text {
+  font-size: 14px; /* Reduced for mobile */
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.sign-in-heading {
+  font-size: 24px; /* Reduced for mobile */
+  font-weight: bold;
+  color: #000;
+  margin: 0;
+}
+
+/* Form fields */
+.form-group {
+  margin-bottom: 16px; /* Reduced margin */
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px; /* Reduced for mobile */
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px; /* Reduced padding */
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px; /* Reduced for mobile */
+  background-color: #ffffff;
+  color: #333;
+}
+
+/* Password field */
+.password-field {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px; /* Reduced for mobile */
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #777;
+}
+
+/* Forgot password link */
+.forgot-password {
+  text-align: right;
+  margin-bottom: 16px;
+}
+
+.forgot-password a {
+  color: #5ad9f0;
+  text-decoration: none;
+  font-size: 12px; /* Reduced for mobile */
+}
+
+/* Sign in button */
+.sign-in-btn {
+  width: 100%;
+  padding: 12px; /* Reduced padding */
+  background-color: #5ad9f0;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px; /* Reduced for mobile */
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* No account section */
+.no-account {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 12px; /* Reduced for mobile */
+}
+
+.no-account span {
+  color: #777;
+  margin-right: 5px;
+}
+
+.no-account a {
+  color: #5ad9f0;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Ensure proper spacing in responsive mode */
+@media (max-width: 768px) {
+  .login-container {
+    grid-template-columns: 1fr; /* Stack sections vertically */
+  }
+
+  .left-section,
+  .right-section {
+    height: 50vh; /* Split height equally */
+  }
+
+  .left-illustration,
+  .right-illustration {
+    bottom: 40px; /* Further reduced */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+  }
+
+  .left-illustration img,
+  .right-illustration img {
+    width: 150px; /* Further reduced */
+  }
+
+  .brain-flower-icon img {
+    width: 100px; /* Further reduced */
+  }
+
+  .login-form-wrapper {
+    width: 80%; /* Slightly larger for usability */
+  }
+
+  .login-form {
+    padding: 15px; /* Further reduced */
+  }
+}
+
+@media (max-width: 576px) {
+  .logo-text h1 {
+    font-size: 30px; /* Further reduced */
+  }
+
+  .left-illustration img,
+  .right-illustration img {
+    width: 120px; /* Further reduced */
+  }
+
+  .form-group input {
+    padding: 8px; /* Further reduced */
+  }
+
+  .sign-in-btn {
+    padding: 10px; /* Further reduced */
+  }
+}
+
+/* Custom Alert Styles */
+.custom-alert-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.custom-success-alert {
+  background-color: white;
+  border-radius: 6px; /* Reduced for mobile */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  padding: 20px; /* Reduced padding */
+  text-align: center;
+  max-width: 300px; /* Reduced width */
+  width: 90%;
+  animation: slideIn 0.3s ease-out;
+}
+
+.success-icon {
+  background-color: #4CAF50;
+  color: white;
+  width: 40px; /* Reduced size */
+  height: 40px; /* Reduced size */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px; /* Reduced size */
+  margin: 0 auto 15px;
+}
+
+.custom-success-alert h2 {
+  margin: 0 0 8px;
+  color: #333;
+  font-size: 18px; /* Reduced for mobile */
+}
+
+.custom-success-alert p {
+  margin: 0 0 15px;
+  color: #666;
+  font-size: 14px; /* Reduced for mobile */
+}
+
+.close-alert-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px 16px; /* Reduced padding */
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.close-alert-btn:hover {
+  background-color: #3e8e41;
+}
+
+/* Temporary alerts for info messages */
+.custom-alert {
+  position: fixed;
+  top: 10px; /* Reduced for mobile */
+  right: 10px; /* Reduced for mobile */
+  padding: 0;
+  border-radius: 4px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.custom-alert-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px; /* Reduced padding */
+}
+
+.custom-alert-info {
+  background-color: #e3f2fd;
+  border-left: 4px solid #2196F3;
+  color: #0d47a1;
+}
+
+.custom-alert-close {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 16px; /* Reduced for mobile */
+  cursor: pointer;
+  margin-left: 10px; /* Reduced margin */
+}

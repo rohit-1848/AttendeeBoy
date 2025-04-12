@@ -1,0 +1,155 @@
+/* Profile.css */
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .profile-content {
+    flex: 1;
+    padding: 15px; /* Reduced padding for mobile */
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  .error-message {
+    color: #d32f2f;
+    margin-bottom: 15px;
+    text-align: center;
+    padding: 10px;
+    background-color: #ffebee;
+    border-radius: 4px;
+    border-left: 4px solid #d32f2f;
+    font-size: 14px; /* Smaller font for mobile */
+  }
+  
+  .loading {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .profile-section {
+    background: #9cf0eb;
+    padding: 15px; /* Reduced padding for mobile */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .profile-section h2 {
+    margin-bottom: 15px;
+    color: #0bc9bf;
+    font-size: 1.5rem; /* Reduced for mobile */
+    font-weight: 700;
+    border-bottom: 2px solid #0bc9bf;
+    padding-bottom: 8px;
+  }
+  
+  .profile-box {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 15px;
+  }
+  
+  .profile-icon {
+    font-size: 30px; /* Reduced for mobile */
+    margin-right: 15px;
+    color: #0bc9bf;
+  }
+  
+  .profile-details p {
+    margin: 5px 0;
+    font-size: 14px; /* Reduced for mobile */
+    color: #333;
+  }
+  
+  .profile-details strong {
+    color: #0bc9bf;
+  }
+  
+  .back-button {
+    background-color: #0bc9bf;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    align-self: center;
+    width: 100%; /* Full width on mobile */
+    font-size: 16px; /* Adjusted for readability */
+  }
+  
+  .back-button:hover {
+    background-color: #0052a3;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .back-button:disabled {
+    background-color: #b1f7f3;
+    color: #666;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .profile-box {
+      flex-direction: column;
+      text-align: center;
+      padding: 10px; /* Reduced padding */
+    }
+  
+    .profile-icon {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  
+    .profile-section h2 {
+      font-size: 1.3rem; /* Further reduced */
+    }
+  
+    .back-button {
+      width: 100%;
+      padding: 8px 16px; /* Adjusted padding for mobile */
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .profile-content {
+      padding: 10px; /* Further reduced padding */
+    }
+  
+    .profile-section {
+      padding: 10px;
+    }
+  
+    .profile-box {
+      max-width: 100%; /* Full width on very small screens */
+      padding: 8px;
+    }
+  
+    .profile-details p {
+      font-size: 12px; /* Smaller font for very small screens */
+    }
+  
+    .back-button {
+      font-size: 14px; /* Smaller button text */
+      padding: 6px 12px;
+    }
+  }
