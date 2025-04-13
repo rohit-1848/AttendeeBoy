@@ -167,7 +167,7 @@ const Signup = () => {
           {!showOtpModal ? (
             <>
               <div className="form-header">
-                <p className="welcome-text">Welcome to SafeSpace</p>
+                <p className="welcome-text">Welcome to AttendeeBoy</p>
                 <h1 className="sign-in-heading">Sign up</h1>
               </div>
 
