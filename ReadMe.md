@@ -171,9 +171,8 @@ This project is self project.
 
 ## Contact
 Author: Rohit
-Email: [email@example.com]
-GitHub: https://github.com/username
-
+Email: []
+GitHub: https://github.com/rohit-1848
 
 ## some buges to be resolved
 JWT token remains stored in cookies even after log out and get erased at refresh only. This allows access og home page directly by "/home" endpoint.
